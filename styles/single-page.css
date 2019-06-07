@@ -14,7 +14,6 @@
 .main_title_container
 {
 	width: 100%;
-	margin-top: 100px;
 }
 
 .main_title
@@ -23,7 +22,6 @@
 	font-weight: 800;
 	color: #100f3a;
 	line-height: 1;
-	margin-top: 12px;
 }
 
 .about_title
