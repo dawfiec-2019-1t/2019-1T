@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* CSS Document */
 
 /******************************
@@ -20,6 +21,8 @@
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,900');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 
 /*********************************
 2. Body and some general stuff
@@ -204,8 +207,8 @@ section
 }
 .super_container
 {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	padding-left: 40px;
 	padding-bottom: 45px;
@@ -397,9 +400,11 @@ section
 }
 .content_container
 {
-	width: 100%;
-	height: 100%;
+    margin: 0px;
+    padding: 50px;
+	
 }
+
 
 /*********************************
 4. Content
@@ -662,117 +667,74 @@ section
 {
 	color: #7a798c;
 }
-
 /*********************************
 6. Portfolio
 *********************************/
 
-.portfolio_categories
-{
-	margin-top: 66px;
+
+/*********************************
+7. Buscador
+*********************************/
+
+#content_container{
+	margin:0;
+	padding:0;
 }
-.portfolio_category
-{
-	display: inline-block;
-	cursor: pointer;
-	font-size: 18px;
-	font-weight: 600;
-	color: #838383;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
-.portfolio_category:not(:last-child)
-{
-	margin-right: 41px;
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
-.portfolio_category:hover,
-.portfolio_category.active
-{
-	color: #100f3a;
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 15px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
-.portfolio_grid
-{
-	width: 100%;
+
+.searchTerm:focus{
+  color: #00B4CC;
 }
-.portfolio_item
-{
-	width: calc((100% - 279px) / 3);
-	float: left;
-	margin-bottom: 89px;
-	margin-right: 93px;
-	background: #100f3a;
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
-.portfolio_item::after
-{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(16,15,58,0.74);
-	content: '';
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 70%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.portfolio_item:hover::after
-{
-	visibility: visible;
-	opacity: 1;
-}
-.portfolio_item img
-{
-	max-width: 100%;
-}
-.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical
-{
-	margin-top: 0;
-}
-.portfolio_item_content
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	z-index: 10;
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.portfolio_item_title
-{
-	font-size: 18px;
-	font-weight: 600;
-	color: #FFFFFF;
-	line-height: 1.2;
-	margin-top: 30px;
-}
-.portfolio_item_link
-{
-	margin-top: 7px;
-}
-.portfolio_item_link a
-{
-	font-size: 12px;
-	font-weight: 500;
-	color: #FFFFFF;
-}
-.portfolio_item:hover .portfolio_item_content
-{
-	visibility: visible;
-	opacity: 1;
+
+
+/*Contenedor de las leyes*/
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
