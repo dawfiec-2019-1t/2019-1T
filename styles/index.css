@@ -738,3 +738,75 @@ body{
     font-weight: 300;
     line-height: 1.2;
 }
+
+.laws_container {
+	margin: 100px 0 0 0;
+}
+
+.jumbotron {
+	border-radius: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.lead {
+	font-size: 18px;
+	display: inline;
+}
+
+.btn {
+	background: #100f3a;
+	border: 0;
+	border-radius: 0;
+	font-size: 14px;
+}
+
+.jumbotron {
+	display: grid;
+}
+
+.news-content {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	margin-right: 40px;
+}
+.display-4
+{
+	font-size: 30px;
+	font-weight: 600;
+	color: #100f3a;
+	line-height: 1;
+	margin-top: 12px;
+}
+
+
+.results-container {
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 2;
+}
+
+
+.results-container .result {
+	height: 30px;
+	width: 30px;
+	margin: 5px;
+	color:#f0f0f0;
+	font-weight: bold;
+	text-align: center;
+}
+.result-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.result.green{	background: #92d36e;	}
+.result.red {	background: #e93578;	}
+.result.grey{	background: #c0c0c0;	}
+.result.blue{	background: #3b83bd;	}
+
+.social_container {
+	grid-row-start: 3;
+	grid-column-start: 1;
+}
