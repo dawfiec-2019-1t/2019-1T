@@ -143,6 +143,7 @@ section
 	display: block;
 	position: relative;
 	box-sizing: border-box;
+	background: #f5f0f0;
 }
 .clear
 {
@@ -214,6 +215,7 @@ section
 	padding-bottom: 45px;
 	padding-right: 41px;
 	padding-top: 97px;
+	background: #FFFFFF;
 }
 .prlx_parent
 {
@@ -265,6 +267,7 @@ section
 	height: 97px;
 	background: #FFFFFF;
 	padding-top: 38px;
+	padding-bottom: 50px;
 	padding-left: 40px;
 	z-index: 10;
 	-webkit-transition: all 200ms ease;
@@ -402,6 +405,8 @@ section
 {
     margin: 0px;
     padding: 50px;
+    background: #FFFFFF;
+
 	
 }
 
@@ -684,7 +689,7 @@ section
 
 body{
   background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .search {
@@ -695,24 +700,24 @@ body{
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 3px solid #100f3a;
   border-right: none;
   padding: 15px;
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9DBFAF;
+  color: #100f3a;
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: #100f3a;
 }
 
 .searchButton {
   width: 40px;
   height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid #100f3a;
+  background: #100f3a;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -737,4 +742,5 @@ body{
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.2;
+
 }

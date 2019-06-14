@@ -143,6 +143,7 @@ section
 	display: block;
 	position: relative;
 	box-sizing: border-box;
+	background: #f5f0f0;
 }
 .clear
 {
@@ -214,6 +215,8 @@ section
 	padding-bottom: 45px;
 	padding-right: 41px;
 	padding-top: 97px;
+	
+	background: #FFFFFF;
 }
 .prlx_parent
 {
@@ -265,6 +268,7 @@ section
 	height: 97px;
 	background: #FFFFFF;
 	padding-top: 38px;
+	padding-bottom: : 50px;
 	padding-left: 40px;
 	z-index: 10;
 	-webkit-transition: all 200ms ease;
@@ -684,7 +688,7 @@ section
 
 body{
   background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .search {
@@ -741,12 +745,14 @@ body{
 
 .laws_container {
 	margin: 100px 0 0 0;
+
 }
 
 .jumbotron {
 	border-radius: 0px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background: #f5f0f0;
 }
 
 .lead {

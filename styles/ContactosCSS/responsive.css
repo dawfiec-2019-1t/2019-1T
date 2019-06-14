@@ -62,6 +62,7 @@
 	.main_content
 	{
 		width: calc(100% - 400px);
+		padding-top: 30px;
 	}
 	.main_title
 	{
