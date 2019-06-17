@@ -44,11 +44,10 @@
 	margin-right: 15px;
 }
 
-.color-label.green{	background: green;	}
-.color-label.red {	background: red;	}
-.color-label.grey{	background: grey;	}
-.color-label.azul{	background: #3b83bd;	}
-
+.color-label.green{	background: #92d36e;	}
+.color-label.red {	background: #e93578;	}
+.color-label.grey{	background: #c0c0c0;	}
+.color-label.blue{	background: #3b83bd;	}
 
 
 
@@ -201,7 +200,7 @@
 }
 
 .comment-box .comment-name {
-	color: #283035;
+	color: #100f3a;
 	font-size: 14px;
 	font-weight: 700;
 	float: left;
@@ -209,7 +208,7 @@
 }
 
 .comment-box .comment-name a {
-	color: #283035;
+	color: #100f3a;
 }
 
 .comment-box .comment-head span {
@@ -230,7 +229,7 @@
 .comment-box .comment-name.by-author, .comment-box .comment-name.by-author a {color: #03658c;}
 .comment-box .comment-name.by-author:after {
 	content: 'autor';
-	background: #03658c;
+	background: #100f3a;
 	color: #FFF;
 	font-size: 12px;
 	padding: 3px 5px;

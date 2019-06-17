@@ -802,11 +802,10 @@ body{
 	font-weight: bold;
 	text-align: center;
 }
-.result-text {
-	display: inline-block;
-	vertical-align: middle;
-}
 
+.result {
+	display: inline-block;
+}
 .result.green{	background: #92d36e;	}
 .result.red {	background: #e93578;	}
 .result.grey{	background: #c0c0c0;	}
@@ -815,4 +814,8 @@ body{
 .social_container {
 	grid-row-start: 3;
 	grid-column-start: 1;
+}
+
+.copyright {
+	padding: 20px;
 }
