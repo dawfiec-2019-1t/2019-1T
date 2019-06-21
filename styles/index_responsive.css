@@ -27,17 +27,8 @@
 
 @media only screen and (max-width: 1600px)
 {
-	.header_button
-	{
-		position: absolute;
-		right: 66px;
-		bottom: -80px;
-		z-index: 10;
-	}
-	.portfolio_item
-	{
-		width: calc((100% - 186px) / 2);
-	}
+
+
 }
 
 /************
@@ -46,26 +37,7 @@
 
 @media only screen and (max-width: 1440px)
 {
-	.general_info
-	{
-		width: 400px;
-	}
-	.general_info_image
-	{
-		height: 400px;
-	}
-	.general_info_content
-	{
-		padding-left: 50px;
-	}
-	.main_content
-	{
-		width: calc(100% - 400px);
-	}
-	.main_title
-	{
-		font-size: 72px;
-	}
+
 }
 
 /************
@@ -91,13 +63,6 @@
 	{
 		display: block;
 	}
-	.header_button_2
-	{
-		display: block;
-		left: 15px;
-		right: auto;
-		bottom: 10px;
-	}
 }
 
 /************
@@ -110,36 +75,6 @@
 	{
 		width: 100%;
 		height: auto;
-	}
-	.general_info
-	{
-		width: 100%;
-	}
-	.main_content_outer
-	{
-		height: auto;
-	}
-	.general_info_image
-	{
-		width: 473px;
-		height: 473px;
-	}
-	.main_content
-	{
-		width: 100%;
-		padding-right: 0;
-	}
-	.general_info_content
-	{
-		padding-left: 80px;
-	}
-	.general_info_title
-	{
-		font-size: 24px;
-	}
-	.mCSB_scrollTools_vertical
-	{
-		display: none !important;
 	}
 }
 
@@ -167,10 +102,7 @@
 
 @media only screen and (max-width: 991px)
 {
-	.general_info_content
-	{
-		padding-left: 50px;
-	}
+
 }
 
 /************
@@ -179,15 +111,7 @@
 
 @media only screen and (max-width: 930px)
 {
-	.general_info_image
-	{
-		width: 323px;
-	}
-	.portfolio_item
-	{
-		width: calc((100% - 120px) / 2);
-		margin-right: 60px;
-	}
+
 }
 
 /************
@@ -217,32 +141,6 @@
 	.logo
 	{
 		font-size: 28px;
-	}
-	.general_info_image
-	{
-		width: 100%;
-		height: calc(100vw - 81px);
-	}
-	.general_info_content
-	{
-		padding-bottom: 40px;
-	}
-	.main_content
-	{
-		padding-left: 52px;
-	}
-	.main_title
-	{
-		font-size: 48px;
-	}
-	.main_subtitle
-	{
-		font-size: 24px;
-	}
-	.portfolio_item
-	{
-		width: calc(100% - 60px);
-		margin-right: 60px;
 	}
 }
 
@@ -295,53 +193,6 @@
 	{
 		font-size: 14px;
 	}
-	.general_info_image
-	{
-		height: calc(100vw - 30px);
-	}
-	.main_content
-	{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.main_content_scroll
-	{
-		padding-right: 0;
-	}
-	.main_title_container
-	{
-		height: 153px;
-	}
-	.main_title
-	{
-		font-size: 36px;
-	}
-	.main_subtitle
-	{
-		font-size: 18px;
-	}
-	.portfolio_categories
-	{
-		margin-top: 50px;
-	}
-	.main_content_scroll
-	{
-		margin-top: 40px;
-	}
-	.portfolio_category
-	{
-		font-size: 16px;
-	}
-	.portfolio_category:not(:last-child)
-	{
-		margin-right: 21px;
-	}
-	.portfolio_item
-	{
-		width: 100%;
-		margin-right: 0px;
-		margin-bottom: 60px;
-	}
 }
 
 /************
@@ -350,6 +201,50 @@
 
 @media only screen and (max-width: 539px)
 {
+	.laws_container {
+		margin: 50px 0 0 0;
+	}
+	.results-container {
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+	.news-content {
+		with: 100%;
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+	.social_container {
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+
+	.results-container{
+		text-align: center;
+	}
+
+	.results-container li {
+		display:inline;
+		margin: 0 5px 0 5px;
+	}
+
+	.results-container .result1:after {	content: "SÍ";	}
+	.results-container .result2:after {	content: "NO";	}
+	.results-container .result3:after {	content: "BL";	}
+	.results-container .result4:after {	content: "ABS";	}
+
+
+	.social_container {
+		text-align: center;
+	}
+
+	.social_container li{
+		margin:0 20px 0 20px;
+	}
+
+	.social_container img{
+		height: 25px;
+		width: 25px;
+	}
 	
 }
 
