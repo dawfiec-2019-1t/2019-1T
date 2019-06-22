@@ -13,6 +13,8 @@
 <link rel="stylesheet" type="text/css" href="styles/TeamCSS/team.css">
 <link rel="stylesheet" type="text/css" href="styles/TeamCSS/team_responsive.css">
 <link href="introjs.css" rel="stylesheet">
+<link rel="stylesheet" href="login.css" >
+
 </head>
 <body>
 
@@ -32,6 +34,39 @@
 					<li><a data-step="4" data-intro="Contáctanos" href="contactos.html">Contacto</a></li>
 				</ul>
 				<a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Ayuda guiada</a>
+
+
+				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="log">Login</button>
+
+				<div id="id01" class="modal">
+
+					<form class="modal-content animate" action="/action_page.php">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<img src="images/avatar.png" alt="Avatar" class="avatar">
+						</div>
+
+						<div class="container">
+							<label for="uname"><b>Username</b></label>
+							<input type="text" placeholder="Enter Username" name="uname" required>
+
+							<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+
+							<button type="submit" id="log_pop">Login</button>
+							<label>
+								<input type="checkbox" checked="checked" name="remember"> Remember me
+							</label>
+						</div>
+
+						<div class="container" style="background-color:#f1f1f1">
+							<button type="button" id="log_cancel" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+							<span class="psw">Forgot <a href="#">password?</a></span>
+						</div>
+					</form>
+				</div>
+
+
 			</div>
 			<!-- Menu -->
 	<div class="menu">
