@@ -6,7 +6,7 @@
 p
 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 26px;
+	font-size: 20px;
 	line-height: 1.85714;
 	font-weight: 500;
 	color: #red;
@@ -46,7 +46,7 @@ p
 }
 .main_title
 {
-	font-size: 92px;
+	font-size: 52px;
 	font-weight: 800;
 	color: #100f3a;
 	line-height: 0.75;
