@@ -84,7 +84,7 @@
 		<div class="wrap">
 			<div class="search">
 				<input id="busqueda" type="text" class="searchTerm" placeholder="Búsqueda....">
-				<button type="submit" class="searchButton">
+				<button v-on:click="busqueda" type="submit" class="searchButton">
 					<i class="fa fa-search"></i>
 				</button>
 			</div>
@@ -99,7 +99,7 @@
 					<hr class="my-4">
 					
 					<p class="lead">
-						<a class="btn btn-primary btn-lg" v-bind:href="'single-page.html?law_id='+law.id" role="button">Ver mas</a>
+						<a class="btn btn-primary btn-lg" v-bind:href="'single-page.html?law_id='+law.id" role="button" type="submit">Ver mas</a>
 					</p>
 				</div>
 				 
@@ -250,11 +250,11 @@
 <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/Isotope/fitcolumns.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/portfolio.js"></script>
 <script type="text/javascript" src="js/intro.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.0/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/busqueda-search.js"></script>
 
 <script type="text/javascript">
       var urlescritores="https://firebasestorage.googleapis.com/v0/b/governus-803f2.appspot.com/o/governus-803f2-export.json?alt=media&token=6962cc81-a7ea-41d5-a802-d35aea627880";
@@ -262,6 +262,7 @@
         el:'.super_container',
         created: function(){
           this.getLaws();
+          
           /*this.hideAll();*/
         },
         data:{
@@ -279,7 +280,35 @@
 
               /*console.log(response.body.escritores)*/
             });
-          }
+          },
+
+        	busqueda: function(){
+
+        		var request = $('#busqueda').val()
+        		console.log(request)
+        		request = request.toUpperCase();
+				var arreglo_titulos = document.getElementsByClassName('display-4');
+				var arreglo_columna = document.getElementsByClassName('col-md-6');
+				/*arreglo_columna[0].style.visibility='hidden';*/
+				console.log(arreglo_titulos[0].innerHTML.toUpperCase())
+				for(var i=0;i<arreglo_columna.length;i++){
+					if(!arreglo_titulos[i].innerHTML.toUpperCase().includes(request)){
+						arreglo_columna[i].style.display = 'none'
+					}else{
+						arreglo_columna[i].style.visibility=''
+					}
+
+				}
+				
+
+        	} 
+
+
+        },
+        computed: {
+        	searchlaw: function(){
+        		return this.laws.filter((law)=> law.title.includes(this.title));
+        	}
 
 
 
