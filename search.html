@@ -83,140 +83,29 @@
 	<div class="content_container">
 		<div class="wrap">
 			<div class="search">
-				<input type="text" class="searchTerm" placeholder="Busqueda....">
-				<button type="submit" class="searchButton">
+				<input type="text" class="searchTerm" placeholder="Busqueda...">
+				<button type="submit" onclick="search()" class="searchButton">
 					<i class="fa fa-search"></i>
 				</button>
 			</div>
 		</div>
 	</div>
-	<div class="laws_container">
-		<div class="row">
-			<div class="col">
+	<div id="search-app" class="laws_container">
+		<div class="row" v-for="pair in pairs">
+			<div class="col" v-for="law in pair">
 				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
+					<h1 class="display-4">{{ law.title }}</h1>
+					<p class="lead">{{ base_description }}</p>
 					<hr class="my-4">
 					
 					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-
-				
-			</div>
-			<div class="col">
-				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica Reformatoria a la Ley Orgánica de Servicio Público</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-
-
-				
-			</div>
-
-			
-		</div>
-		<div class="row">
-			<div class="col">
-				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-
-				
-			</div>
-			<div class="col">
-				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-
-
-				
-			</div>
-
-			
-		</div>
-
-
-	<!--
-		<section>
-			<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-		</section>
-		<section>
-			<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica Reformatoria a la Ley Orgánica de Servicio Público</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-		</section>
-		<section>
-			<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de la Defensoría del Pueblo</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-		</section>-->
-		<!--<div class="row justify-content-center">
-			<div class="row">
-				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="jumbotron">
-					<h1 class="display-4">Ley Orgánica de las Personas Adultas Mayores</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis elit tellus. Aenean in neque augue. Phasellus et tempus nisi. Proin tempor sem a aliquet lacinia. Proin mollis nec purus sit amet feugiat. Sed id metus ultricies, vulputate urna at, cursus dui. Suspendisse eleifend leo sit amet sem suscipit, ut lacinia purus convallis. Proin a dapibus metus. Proin nec tincidunt massa.</p>
-					<hr class="my-4">
-					
-					<p class="lead">
-						<a class="btn btn-primary btn-lg" href="#" role="button">Ver mas</a>
+						<a class="btn btn-primary btn-lg" v-bind:href="'single-page.html?law_id='+law.id" role="button">Ver mas</a>
 					</p>
 				</div>
 			</div>
 		</div>
-		
-	</div>-->
-	
 	</div>
+
 <div align='center'>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -235,6 +124,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/portfolio.js"></script>
 <script type="text/javascript" src="intro.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="js/search.js"></script>
 
 <script>
 // Get the modal

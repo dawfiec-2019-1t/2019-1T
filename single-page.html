@@ -19,7 +19,6 @@
 <div class="super_container">
 	
 	<!-- Header -->
-
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<a href="index.html"><div class="logo">Govern<span>.</span>US</div></a>
@@ -48,35 +47,36 @@
 		</div>
 	</header>
 
+    <!-- Content -->
 	<div class="content_container">
 		<div class="main_content_outer d-flex flex-xl-row flex-column align-items-start justify-content-start">
 
 			<!-- General Information -->
-			<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
+			<div id="stats-app" class="general_info d-flex flex-xl-column flex-md-row flex-column">
 				<div>
 					<div class="general_info_image">
 						<div class="background_image" style="background-image:url(images/chart.png)"></div>
 					</div>
 				</div>
 				<div class="general_info_content">
-					<div class="general_info_content_inner mCustomScrollbar" data-mcs-theme="minimal-dark">
 						<div class="general_info_title">Resumen</div>
+
 						<ul class="general_info_list">
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="color-label green">90</div>
-								<div class="general_info_text">votos afirmativos</span></div>
+								<div class="color-label green">{{ law.affirmative_votes }}</div>
+								<div class="general_info_text"><span>votos afirmativos</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="color-label red">33</div>
-								<div class="general_info_text">votos negativos</span></div>
+								<div class="color-label red">{{ law.negative_votes }}</div>
+								<div class="general_info_text"><span>votos negativos</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="color-label grey">15</div>
-								<div class="general_info_text">voto blanco</span></div>
+								<div class="color-label grey">{{ law.blank_votes }}</div>
+								<div class="general_info_text"><span>voto blanco</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="color-label blue">12</div>
-								<div class="general_info_text">abstención</span></div>
+								<div class="color-label blue">{{ law.abstentions }}</div>
+								<div class="general_info_text"><span>abstención</span></div>
 							</li>
 						</ul>
 
@@ -88,123 +88,65 @@
 								<li><a href="#"><img src="images/linkedinicon.png" /></a></li>
 							</ul>
 						</div>
-					</div>
+
 				</div>
 			</div>
 
 			<!-- Main Content -->
 
 			<div class="main_content">
-				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-					<div class="main_subtitle">14/05/2019</div>
-					<div class="main_title">Ley Orgánica de las Personas Adultas Mayores</div>
-				</div>
-				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
-					<div class="about_content">
-						<div class="about_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem. Fusce id ligula non risus mollis consectetur. Nam lobortis, erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit. Sed a est a quam mattis suscipit. Proin et faucibus diam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem. Fusce id ligula non risus mollis consectetur. Nam lobortis, erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit. Sed a est a quam mattis suscipit.</p>
+                
+                <div id="information-app">
+                    <div class="main_title_container d-flex flex-column align-items-start justify-content-end">
+                        <div class="main_subtitle">{{ law.pub_date }}</div>
+                        <div class="main_title">{{ law.title }}</div>
+                    </div>
+
+                    <div class="about_content">
+                        <div class="about_text">
+                            <p>{{ laws.base_description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+				<div id="comments-app" class="container">
+					<div class="row">
+					<!-- Contenedor Principal -->
+					    <div class="comments-container">
+							<ul id="comments-list" class="comments-list">
+                                <li v-for="comment in law_comments">
+                                    <div class="comment-main-level">
+                                        <!-- Avatar -->
+                                        <div class="comment-avatar"><img v-bind:src="'images/' + comment.user.photo" alt=""></div>
+                                        <!-- Contenedor del Comentario -->
+                                        <div class="comment-box">
+                                            <div class="comment-head">
+                                                <h6 class="comment-name"><a href="">{{ comment.user.name }}</a></h6>
+                                                <span>{{ comment.comment.pub_date }}</span>
+                                                <i class="fa fa-reply"></i>
+                                                <i class="fa fa-heart"></i>
+                                            </div>
+                                            <div class="comment-content">{{ comments.base_comment }}</div>
+                                        </div>
+                                    </div>
+                                </li>
+							</ul>
 						</div>
 					</div>
-
-
-
-
-<div class="container">
-	<div class="row">
-	<!-- Contenedor Principal -->
-    <div class="comments-container">
-
-		<ul id="comments-list" class="comments-list">
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="images/ginger.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Ginger Saltos, MSc.</a></h6>
-							<span>hace 20 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Oe está chevere esta página, no sé por qué estos no hicieron un trabajo así en bases.
-						</div>
-					</div>
+                    <div class="row">
+                        <div class="form-container">
+                            <textarea class="comment-form" onkeyup="auto_grow(this)"></textarea>
+                            <button class="comment-button" onclick="comment()" value="Comentar" />
+                        </div>
+                    </div>
 				</div>
-			</li>
 
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="images/allan.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Allan Avendaño</a></h6>
-							<span>hace 10 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Positivooooooooooooooo! Les voy a poner 100.
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="images/Karen.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Karen Bermúdez</a></h6>
-							<span>hace 5 minutos</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							Gracias profesor. Quiero ser su ayudante el siguiente semestre. Usted es el mejor, aunque eso se lo digo a todos los profesores.
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li>
-				<div class="comment-main-level">
-					<!-- Avatar -->
-					<div class="comment-avatar"><img src="images/eduardo.jpg" alt=""></div>
-					<!-- Contenedor del Comentario -->
-					<div class="comment-box">
-						<div class="comment-head">
-							<h6 class="comment-name"><a href="http://creaticode.com/blog">Eduardo Cruz</a></h6>
-							<span>hace 1 minuto</span>
-							<i class="fa fa-reply"></i>
-							<i class="fa fa-heart"></i>
-						</div>
-						<div class="comment-content">
-							👀📷
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	</div>
-</div>
-
-
-
-
-				</div>
 
 			</div>
 		</div>
-
-
 	</div>
+
+	<div id="single-law-app"></div>
 <div align='center' class="copyright">
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -224,6 +166,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="js/single-page.js"></script>
 <script src="js/custom.js"></script>
 </body>
 </html>
