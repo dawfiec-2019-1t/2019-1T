@@ -32,6 +32,7 @@ var urlescritores="https://firebasestorage.googleapis.com/v0/b/governus-803f2.ap
         var arreglo_columna = document.getElementsByClassName('col-md-6');
         /*arreglo_columna[0].style.visibility='hidden';*/
         console.log(arreglo_titulos[0].innerHTML.toUpperCase())
+
         for(var i=0;i<arreglo_columna.length;i++){
           if(!arreglo_titulos[i].innerHTML.toUpperCase().includes(request)){
             arreglo_columna[i].style.display = 'none'
