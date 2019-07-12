@@ -10,10 +10,12 @@
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" href="styles/quehacemos_responsive.css" >
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<link href="styles/introjs.css" rel="stylesheet">
+<link href="introjs.css" rel="stylesheet">
+<link rel="stylesheet" href="login.css" >
 <link rel="stylesheet" href="styles/quehacemos.css" >
-<link rel="stylesheet" href="styles/login.css" >
+<link rel="stylesheet" href="styles/quehacemos_responsive.css" >
 
 
 
@@ -30,7 +32,7 @@
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li><a href="index.html">Principal</a></li>	
-					<li><a data-step="1" data-intro="Consulta informacion de la Ley Orgánica que desees" href="search.html">Buscar</a></li>					
+					<li><a data-step="1" data-intro="Buscar" href="search.html">Buscar</a></li>					
 					<li class="active"><a data-step="2" data-intro="Descubre qué hacemos" href="QueHacemos.html">Acerca de</a></li>
 					<li><a data-step="3" data-intro="Quienes somos" href="Team.html">Equipo</a></li>
 					<li><a data-step="4" data-intro="Contáctanos" href="contactos.html">Contacto</a></li>
@@ -43,7 +45,7 @@
 
 				<div id="id01" class="modal">
 
-					<form class="modal-content animate" action="dashboard/dashboard.html">
+					<form class="modal-content animate" action="/action_page.php">
 						<div class="imgcontainer">
 							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 							<img src="images/avatar.png" alt="Avatar" class="avatar">
@@ -51,10 +53,10 @@
 
 						<div class="container">
 							<label for="uname"><b>Username</b></label>
-							<input type="text" placeholder="Enter Username" id="uname" required>
+							<input type="text" placeholder="Enter Username" name="uname" required>
 
 							<label for="psw"><b>Password</b></label>
-							<input type="password" placeholder="Enter Password" id="psw" required>
+							<input type="password" placeholder="Enter Password" name="psw" required>
 
 							<button type="submit" id="log_pop">Login</button>
 							<label>
@@ -94,12 +96,11 @@
 
 			<!-- Main Content -->
 
-			<div class="main_content">
-				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-					<h1 class="main_title">¿Qué Hacemos?</h1>
-				</div>
+			
+				
 				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
 					<div class="about_content">
+						<h1 class="main_title">¿Qué Hacemos?</h1>
 						<div class="about_text">
 							<p>Somos una organización sin fines de lucro que informa sobre sobre las votaciones que se llevan a cabo en el Pleno de la Asamblea Nacional del Ecuador con el fin de involucrar más a los ciudadanos en la política nacional para que puedan colaborar activamente de la misma.</p>
 						</div>
@@ -108,21 +109,22 @@
 
 						<div class="loaders clearfix">
 							<h2 class="main_title">¿Sabías qué?</h2>
+							<p>La cantidad de personas que visitan las leyes en porcentajes son:</p>
 							<!-- Loader -->
 							<div class="loader_container">
 								<div class="loader" data-perc="0.75"></div>
 								<div class="loader_content text-center">
-									<div class="loader_title">LOPAM</div>
-									<div class="loader_subtitle">Ley Orgánica de las Personas Adultas Mayores.</div>
+									<div class="loader_title">LDC</div>
+									<div class="loader_subtitle">Ley de Compañías</div>
 								</div>
 							</div>
 							
 							<!-- Loader -->
 							<div class="loader_container">
 								<div class="loader" data-perc="0.83"></div>
-								<div class="loader_content text-center">
-									<div class="loader_title">LOSP</div>
-									<div class="loader_subtitle">Ley Orgánica de Servicio Público</div>
+								<div class="loader_content text-center">	
+									<div class="loader_title">LODC</div>
+									<div class="loader_subtitle">Ley Orgánica de Comunicación</div>
 								</div>
 							</div>
 
@@ -130,8 +132,9 @@
 							<div class="loader_container">
 								<div class="loader" data-perc="0.25"></div>
 								<div class="loader_content text-center">
-									<div class="loader_title">LODP</div>
-									<div class="loader_subtitle">Ley Orgánica de la Defensoría del Pueblo</div>
+									<div class="loader_title">LOSP</div>
+									<div class="loader_subtitle">Ley Orgánica de Servicio Público</div>
+								
 								</div>
 							</div>
 
@@ -146,14 +149,14 @@
 
 						</div>
 					</div>
-				</div>
+				
 
 			</div>
 		</div>
 
 
 	</div>
-<div style="text-align:center;">
+<div align='center'>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
@@ -173,7 +176,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
-<script type="text/javascript" src="js/intro.js"></script>
+<script type="text/javascript" src="intro.js"></script>
 
 </body>
 </html>
