@@ -36,6 +36,7 @@
 			<div class="hamburger ml-auto">menu</div>
 			<div class="menu_nav text-right">
 				<ul>
+					<li><a href="index.html">Principal</a></li>
 					<li><a href="search.html">Buscar</a></li>					
 					<li><a href="QueHacemos.html">Acerca de</a></li>
 					<li><a href="Team.html">Equipo</a></li>
@@ -126,19 +127,17 @@
                                                 <i class="fa fa-reply"></i>
                                                 <i class="fa fa-heart"></i>
                                             </div>
-                                            <div class="comment-content">{{ comments.base_comment }}</div>
+                                            <div class="comment-content">{{ comment.comment.comment }}</div>
                                         </div>
                                     </div>
                                 </li>
 							</ul>
 						</div>
 					</div>
-                    <div class="row">
                         <div class="form-container">
-                            <textarea class="comment-form" onkeyup="auto_grow(this)"></textarea>
-                            <button class="comment-button" onclick="comment()" value="Comentar" />
+                            <textarea class="comment-form" onkeyup="auto_grow(this)" placeholder="Deja un comentario"></textarea>
+                            <button class="comment-button" onclick="comment()">Comentar</button>
                         </div>
-                    </div>
 				</div>
 
 
