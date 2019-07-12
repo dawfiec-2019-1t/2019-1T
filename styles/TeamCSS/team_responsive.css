@@ -201,93 +201,85 @@
 /************
 5. 1024px
 ************/
-	@media only screen and (max-width: 980)
+	@media only screen and (max-width: 980px)
 	{
+	.header_button_2
+		{
+			display: block;
+			left: 15px;
+			right: auto;
+			bottom: 10px;
+		}
 
 
+		.main_nav
+		{
+			display: none !important;
+		}
+		.menu
+		{
+			display: block;
+		}
+		.logo
+		{
+			font-size: 28px;
+		}
+		.general_info_image
+		{
+			width: 323px;
+		}
+		.col-3 {
+			
+			max-width: none;
+			padding: 1%;
+		}
+		.general_info_content
+		{
+			padding-left: 40px;
+		}
+		.main_content
+		{
+			padding-left: 52px;
+		}
+		.main_title
+		{
+			font-size: 48px;
+		}
+		.main_subtitle
+		{
+			font-size: 24px;
+		}
+		.portfolio_item
+		{
+			width: calc(100% - 60px);
+			margin-right: 60px;
+		}
 
-		
+		l_info {
+			width: auto;
+		}
+		div {
+			position: relative;
+		}
 
 
-.header_button_2
+		.background_image
 	{
-		display: block;
-		left: 15px;
-		right: auto;
-		bottom: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
 	}
 
-
-	.main_nav
-	{
-		display: none !important;
-	}
-	.menu
-	{
-		display: block;
-	}
-	.logo
-	{
-		font-size: 28px;
-	}
 	.general_info_image
 	{
-		width: 323px;
+		width: 100%;
+		height: 473px;
 	}
-	.col-3 {
-	    
-	    max-width: none;
-	    padding: 1%;
-	}
-	.general_info_content
-	{
-		padding-left: 40px;
-	}
-	.main_content
-	{
-		padding-left: 52px;
-	}
-	.main_title
-	{
-		font-size: 48px;
-	}
-	.main_subtitle
-	{
-		font-size: 24px;
-	}
-	.portfolio_item
-	{
-		width: calc(100% - 60px);
-		margin-right: 60px;
-	}
-
-	l_info {
-     	width: none;
-	}
-	div {
-		position: relative;
-	}
-
-
-	.background_image
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-
-.general_info_image
-{
-	width: 100%;
-	height: 473px;
-}
-
-
 }
 
 /************
@@ -438,7 +430,7 @@
 	}
 
 	l_info {
-     	width: none;
+     	width: auto;
 	}
 
 
@@ -497,7 +489,7 @@
 	}
 
 	l_info {
-     	width: none;
+     	width: auto;
 	}
 
 
