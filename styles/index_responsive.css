@@ -209,7 +209,7 @@
 		grid-column-start: 1;
 	}
 	.news-content {
-		with: 100%;
+		width: 100%;
 		grid-row-start: 2;
 		grid-column-start: 1;
 	}

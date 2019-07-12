@@ -47,18 +47,7 @@
 
 @media only screen and (max-width: 1440px)
 {
-	.general_info
-	{
-		width: 400px;
-	}
-	.general_info_image
-	{
-		height: 400px;
-	}
-	.general_info_content
-	{
-		padding-left: 50px;
-	}
+	
 	.main_content
 	{
 		width: calc(100% - 400px);
