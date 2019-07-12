@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
 <title>Equipo de desarrollo</title>
-<meta http-equiv="Content-Type" content="text/html"; charset=utf-8/>
-
+<!--<meta http-equiv="Content-Type" content="text/html" charset=utf-8>-->
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="styles/TeamCSS/team.css">
 <link rel="stylesheet" type="text/css" href="styles/TeamCSS/team_responsive.css">
-<link href="introjs.css" rel="stylesheet">
-<link rel="stylesheet" href="login.css" >
+<link href="styles/introjs.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/login.css" >
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li><a href="index.html">Principal</a></li>	
-					<li><a data-step="1" data-intro="Buscar" href="search.html">Buscar</a></li>					
+					<li><a data-step="1" data-intro="Consulta informacion de la Ley Orgánica que desees" href="search.html">Buscar</a></li>					
 					<li><a data-step="2" data-intro="Descubre qué hacemos" href="QueHacemos.html">Acerca de</a></li>
 					<li class="active"><a data-step="3" data-intro="Quienes somos" href="Team.html">Equipo</a></li>
 					<li><a data-step="4" data-intro="Contáctanos" href="contactos.html">Contacto</a></li>
@@ -40,7 +40,7 @@
 
 				<div id="id01" class="modal">
 
-					<form class="modal-content animate" action="/action_page.php">
+					<form class="modal-content animate" action="dashboard/dashboard.html">
 						<div class="imgcontainer">
 							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 							<img src="images/avatar.png" alt="Avatar" class="avatar">
@@ -48,10 +48,10 @@
 
 						<div class="container">
 							<label for="uname"><b>Username</b></label>
-							<input type="text" placeholder="Enter Username" name="uname" required>
+							<input type="text" placeholder="Enter Username" id="uname" required>
 
 							<label for="psw"><b>Password</b></label>
-							<input type="password" placeholder="Enter Password" name="psw" required>
+							<input type="password" placeholder="Enter Password" id="psw" required>
 
 							<button type="submit" id="log_pop">Login</button>
 							<label>
@@ -84,7 +84,7 @@
 	</div>
 		</div>
 	</header>
-<!-------------------------------------------------------------------------------------------------------------->
+
 	<div class="content_container">
 		<div class="main_content_outer justify-content-start">
 		<!--Rows de perfiles-->
@@ -283,8 +283,8 @@
 </div><!--Fin de la cuarta columna de la primera fila-->
 
 </div> <!--Fin del primer row-->
-	<!--------------------footer-->
-<div align='center'>
+	<!--footer-->
+<div style="text-align:center;">
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>  
@@ -301,6 +301,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/Isotope/fitcolumns.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/portfolio.js"></script>
-<script type="text/javascript" src="intro.js"></script>
+<script type="text/javascript" src="js/intro.js"></script>
 </body>
 </html>

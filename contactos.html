@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <title>Contactos</title>
-<meta http-equiv="Content-Type" content="text/html"; charset=utf-8/>
+<meta charset=utf-8>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="styles/ContactosCSS/contactos.css">
 <link rel="stylesheet" type="text/css" href="styles/contactosCSS/contactos_responsive.css">
-<link href="introjs.css" rel="stylesheet">
-<link rel="stylesheet" href="login.css" >
+<link href="styles/introjs.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/login.css" >
 
 
 </head>
@@ -29,7 +29,7 @@
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
         <ul class="d-flex flex-row align-items-center justify-content-start">
           <li><a href="index.html">Principal</a></li> 
-          <li><a data-step="1" data-intro="Buscar" href="search.html">Buscar</a></li>         
+          <li><a data-step="1" data-intro="Consulta informacion de la Ley Orgánica que desees" href="search.html">Buscar</a></li>         
           <li><a data-step="2" data-intro="Descubre qué hacemos" href="QueHacemos.html">Acerca de</a></li>
           <li><a data-step="3" data-intro="Quienes somos" href="Team.html">Equipo</a></li>
           <li class="active"><a data-step="4" data-intro="Contáctanos" href="contactos.html">Contacto</a></li>
@@ -40,7 +40,7 @@
 
         <div id="id01" class="modal">
 
-          <form class="modal-content animate" action="/action_page.php">
+          <form class="modal-content animate" action="dashboard/dashboard.html">
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
               <img src="images/avatar.png" alt="Avatar" class="avatar">
@@ -48,10 +48,10 @@
 
             <div class="container">
               <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
+              <input type="text" placeholder="Enter Username" id="uname" required>
 
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password" id="psw" required>
 
               <button type="submit" id="log_pop">Login</button>
               <label>
@@ -83,7 +83,6 @@
 	</div>
 		</div>
 	</header>
-<!-------------------------------------------------------------------------------------------------------------->
 	<div class="content_container">
 		<div class="main_content_outer justify-content-start">
 
@@ -95,7 +94,7 @@
 </div>
       <div class="map">
 		<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 460px">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.014486149739!2d-79.96667718572081!3d-2.1481404377782116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)!5e0!3m2!1ses!2sec!4v1559881737714!5m2!1ses!2sec" width="100" height="150" frameborder="0" style="border:30" allowfullscreen></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.014486149739!2d-79.96667718572081!3d-2.1481404377782116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela+Superior+Polit%C3%A9cnica+del+Litoral+(ESPOL)!5e0!3m2!1ses!2sec!4v1559881737714!5m2!1ses!2sec" width="100" height="150" style="border:0px" allowfullscreen></iframe>
 </div>
 
 		</div><!--end of map-->     
@@ -111,20 +110,20 @@
 
           <div class="form-group">
           <label for="exampleFormControlInput1">Nombres y Apellidos</label>
-          <input type="texto" class="form-control" id="exampleFormControlInput1" placeholder="">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
         </div>
 
         <div class="row">
           <div class="col">
           <div class="form-group">
-          <label for="exampleFormControlInput1">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+          <label for="exampleFormControlInput2">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="nombre@ejemplo.com">
         </div>
       </div>
       <div class="col">
         <div class="form-group">
-          <label for="exampleFormControlSelect2">Lugar de Origen</label>
-          <select class="form-control" id="exampleFormControlSelect1" placeholder="Lugar">
+          <label for="exampleFormControlSelect3">Lugar de Origen</label>
+          <select class="form-control" id="exampleFormControlSelect3">
             <option value="" disabled selected hidden>Seleccionar lugar</option>
             <option> Afganistán</option>
   <option> Albania</option>
@@ -436,11 +435,11 @@
 </div>
      
 
-  <label for="exampleFormControlSelect2">Fecha de Nacimiento</label>
+  <label id="exampleFormControlSelect2">Fecha de Nacimiento</label>
     <div class="row">
       <div class="col">
          <div class="form-group">
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect5">
             <option value="" disabled selected hidden>Dia</option>
             <option>1</option>
             <option>2</option>
@@ -478,7 +477,7 @@
         </div>
         <div class="col">
         <div class="form-group">
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect6">
             <option value="" disabled selected hidden>Mes</option>
             <option>Enero</option>
             <option>Febrero</option>
@@ -497,7 +496,7 @@
       </div>
       <div class="col">
   <div class="form-group">
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect7">
             <option value="" disabled selected hidden>Año</option>
             <option>1980</option>
             <option>1981</option>
@@ -548,7 +547,7 @@
   
 </div><!--fin del row general-->
 
-<div align='center'>
+<div style="text-align:center;">
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>  
@@ -565,7 +564,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/Isotope/fitcolumns.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/portfolio.js"></script>
-<script type="text/javascript" src="intro.js"></script>
+<script type="text/javascript" src="js/intro.js"></script>
 
 </body>
 </html>

@@ -30,3 +30,11 @@ p
 	color: #7a798c;
 	margin-top: 12px;
 }
+.main_content
+{
+	width: calc(100% - 473px);
+	height: 100%;
+	padding-left: 82px;
+	padding-right: 30px;
+	justify-content: center;
+}
